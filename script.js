@@ -29,7 +29,6 @@ const getBooks = async () => {
 
     // create variable to contain result of search (an array)
     let readingList = response.data.works
-    console.log(readingList)
 
     // try to manipulate the DOM to show the contents of the array to the user on the page
 
@@ -48,18 +47,53 @@ const getBooks = async () => {
     // try 3 FAILED
     // this time, create an unordered list in the HTML first
     // create a variable named list and get the element whose id is “myList”
+
     let list = document.getElementById("myList")
+
     // iterate all the array items using forEach
     // at each iteration, create a li element
     // put the innerText value the same as the current item
     // and append the li at the list
-    readingList.forEach((item) => {
+
+    // readingList.forEach((item) => {
+    //     let li = document.createElement('li')
+    //     li.innerText = item
+    //     list.appendChild(li)
+    // })
+
+    // doesn't work, maybe I'm not targeting the key/value pair I want specifically enough
+    // could I use a for loop to do this?
+
+    // trying pinpointing data more with dot notation:
+    // readingList.title.forEach((item) => {
+    //     let li = document.createElement('li')
+    //     li.innerText = item
+    //     list.appendChild(li)
+    // })
+    // nope! undefined
+
+    // try 4 WORKS!
+    // playing around with how to access title, trying .map
+
+    let result = readingList.map((a => a.title))
+    // this works, now show in the DOM using the list variable I created above
+    result.forEach((item) => {
         let li = document.createElement('li')
         li.innerText = item
         list.appendChild(li)
     })
-    // doesn't work, maybe I'm not targeting the key/value pair I want specifically enough
-    // could I use a for loop to do this?
+
+    // NOTES TO SELF
+    // this works but repeat searches just append more books - way around this?
+    // I'm also wondering if now that I've gotten it to work, could I include the author somehow?
+    // trying different approaches
+    // realized that name of author is nested inside the authors key with another key
+
+    let newArray = readingList.map(function(item) {
+        return item[readingList.title, readingList.authors.name]
+    })
+    console.log(newArray)
+
 
 
 }
