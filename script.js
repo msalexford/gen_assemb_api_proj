@@ -109,12 +109,6 @@ const getBooks = async () => {
     // doesn't work, shows in console.log as an object but I think the nested
     // and sometimes multiple authors is snagging somehow
 
-    // newArray.forEach((item) => {
-    //     let li = document.createElement('li')
-    //     li.innerText = item
-    //     list.appendChild(li)
-    // })
-
 }
 
 //---------------------------------------------//
