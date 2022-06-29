@@ -76,25 +76,44 @@ const getBooks = async () => {
     // playing around with how to access title, trying .map
 
     let result = readingList.map((a => a.title))
-    // this works, now show in the DOM using the list variable I created above
+    
+    // now show in the DOM using the list variable I created above
     result.forEach((item) => {
         let li = document.createElement('li')
         li.innerText = item
         list.appendChild(li)
     })
 
-    // NOTES TO SELF
+    // NOTES TO SELF, trying to add more/make adjustments
+
     // this works but repeat searches just append more books - way around this?
-    // I'm also wondering if now that I've gotten it to work, could I include the author somehow?
+
+    // wondering if I could include the author somehow?
     // trying different approaches
     // realized that name of author is nested inside the authors key with another key
 
-    let newArray = readingList.map(function(item) {
-        return item[readingList.title, readingList.authors.name]
-    })
-    console.log(newArray)
+    // didn't work -
+    // let newArray = readingList.map(function(item) {
+    //     return item[readingList.title, readingList.authors.name]
+    // })
+    // console.log(newArray)
 
+    // function selectFewerProps(show) {
+    //     const {title, authors} = show
+    //     return {title, authors}
+    // }
 
+    // const newArray = readingList.map(selectFewerProps)
+
+    // trying to pass in new variable to list loop
+    // doesn't work, shows in console.log as an object but I think the nested
+    // and sometimes multiple authors is snagging somehow
+
+    // newArray.forEach((item) => {
+    //     let li = document.createElement('li')
+    //     li.innerText = item
+    //     list.appendChild(li)
+    // })
 
 }
 
