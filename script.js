@@ -109,6 +109,13 @@ const getBooks = async () => {
     // doesn't work, shows in console.log as an object but I think the nested
     // and sometimes multiple authors is snagging somehow
 
+    // trying destructuring to extract author name
+
+    console.log(readingList)
+    const readingListTest = readingList
+
+    const { title: myTitle, authors: {'0': {name: authorName} } } = readingListTest
+    console.log(readingListTest)
 }
 
 //---------------------------------------------//
