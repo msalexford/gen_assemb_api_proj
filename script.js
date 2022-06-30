@@ -1,15 +1,11 @@
-//---------------------------------------------//
-// add a click event listener to the home page button
-//---------------------------------------------//
-
 
 
 //---------------------------------------------//
-// store variables of three items we will need:
+// for api call, store variables of three items we will need:
 //---------------------------------------------//
 
 // search button we will use to make the search
-const button = document.querySelector('button')
+const searchButton = document.getElementById('searchButton')
 // input field where the user will be typing in their search
 const input = document.querySelector('input')
 
@@ -39,48 +35,11 @@ const getBooks = async () => {
 
     // try to manipulate the DOM to show the contents of the array to the user on the page
 
-    // try 1 FAILED
-    // use for loop to display contents of variable
-    // for (i=0;i<readingList.length;i++) {
-    //     document.write(readingList[i] + '<br >')
-    // }
-    // crap, this just shows a list of items that look like '[object Object]'
-
-    // try 2 FAILED
-    // use toString()
-    // document.write(readingList.toString())
-    // doesn't work, same as above but in string format
-
-    // try 3 FAILED
-    // this time, create an unordered list in the HTML first
     // create a variable named list and get the element whose id is “myList”
 
     let list = document.getElementById("myList")
 
-    // iterate all the array items using forEach
-    // at each iteration, create a li element
-    // put the innerText value the same as the current item
-    // and append the li at the list
-
-    // readingList.forEach((item) => {
-    //     let li = document.createElement('li')
-    //     li.innerText = item
-    //     list.appendChild(li)
-    // })
-
-    // doesn't work, maybe I'm not targeting the key/value pair I want specifically enough
-    // could I use a for loop to do this?
-
-    // trying pinpointing data more with dot notation:
-    // readingList.title.forEach((item) => {
-    //     let li = document.createElement('li')
-    //     li.innerText = item
-    //     list.appendChild(li)
-    // })
-    // nope! undefined
-
-    // try 4 WORKS!
-    // playing around with how to access title, trying .map
+ 
 
     let result = readingList.map((a => a.title))
     
@@ -91,9 +50,23 @@ const getBooks = async () => {
         list.appendChild(li)
     })
 
-    // NOTES TO SELF, trying to add more/make adjustments
+    // this works but repeat searches just append more books
+    // could I empty the array using .reduce when the user clicks search again?
+    // a clunkier option would be to have another button "clear list"
 
-    // this works but repeat searches just append more books - way around this?
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // wondering if I could include the author somehow?
     // trying different approaches
@@ -129,6 +102,27 @@ const getBooks = async () => {
 // add a click event listener to the result-generating button ('on click, do this'), call getBooks function
 //---------------------------------------------//
 document.getElementById('searchButton').addEventListener('click', getBooks)
+
+//---------------------------------------------//
+// add a mouseover event listener to style button
+//---------------------------------------------//
+
+// create variable for button
+const button = document.querySelector('button')
+
+// create function to change background color of button on mouseover
+function changeBgColor() {
+    button.style.background = '#FFD1BD'
+}
+// create function to return background color to default on mouseover
+function returnBgColor() {
+    button.style.background = ''
+}
+
+// use function with event listener - on hover, change color to yellow
+button.addEventListener('mouseover', changeBgColor)
+// on mouseout, return color to default
+button.addEventListener('mouseout', returnBgColor)
 
 
 
