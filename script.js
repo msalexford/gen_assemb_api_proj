@@ -1,3 +1,7 @@
+//---------------------------------------------//
+// add a click event listener to the home page button
+//---------------------------------------------//
+
 
 
 //---------------------------------------------//
@@ -122,7 +126,9 @@ const getBooks = async () => {
 }
 
 //---------------------------------------------//
-// add a click event listener to the button ('on click, do this'), call getBooks function
+// add a click event listener to the result-generating button ('on click, do this'), call getBooks function
 //---------------------------------------------//
-button.addEventListener('click', getBooks)
+document.getElementById('searchButton').addEventListener('click', getBooks)
+
+
 
