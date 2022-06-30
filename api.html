@@ -15,16 +15,21 @@
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <!--add our javascript, defer so that library loads before-->
         <script defer src = "script.js"></script>
-        <!--add button-->
-        <input type="text" />
-        <button>Search</button>
+        
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <h1>Ready for your reading list?</h1>
-        <p>Type a subject that interests you in the search bar to add to your list. I.e., "psychology", "love", "history"...</p>
-        <ul id="myList"></ul>
+        <p>Type a subject that interests you in the search bar to add to your list. <br />
+            I.e., "psychology", "love", "history"...</p>
+        <!--add button-->
+        <input type="text" placeholder="Search for a subject here."/>
+        <button>Search</button>
+        <br /><br />
+        <div id="resultsdiv">
+            <ul id="myList"></ul>
+        </div>
     </body>
 </html>

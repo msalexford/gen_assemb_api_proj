@@ -9,4 +9,27 @@ li:before {content: '\1F4DA'; margin-left: -20px; margin-right: 10px;}
     font-family: Arial, Geneva, Helvetica, sans-serif;
   }
 
-  body {background-color: #EDF7F6;}
+body {
+    background-color: #EDF7F6;
+    padding: .5em;
+}
+
+input{ 
+    font-size:1em;
+    padding:.5em;
+    width: 250px;
+}
+
+button {
+    font-size: 1em;
+    padding: .5em;
+}
+
+#resultsdiv {
+    width: 500px;
+    padding: .5em;
+}
+
+ul li {
+    margin: 5px;
+}
