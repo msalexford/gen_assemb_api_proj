@@ -41,3 +41,71 @@
 
     // try 4 WORKS!
     // playing around with how to access title, trying .map
+
+
+
+    // wondering if I could include the author somehow?
+    // trying different approaches
+    // realized that name of author is nested inside the authors key with another key
+
+    // didn't work -
+    // let newArray = readingList.map(function(item) {
+    //     return item[readingList.title, readingList.authors.name]
+    // })
+    // console.log(newArray)
+
+    // function selectFewerProps(show) {
+    //     const {title, authors} = show
+    //     return {title, authors}
+    // }
+
+    // const newArray = readingList.map(selectFewerProps)
+
+    // trying to pass in new variable to list loop
+    // doesn't work, shows in console.log as an object but I think the nested
+    // and sometimes multiple authors is snagging somehow
+
+    // trying destructuring to extract author name
+
+    // console.log(readingList)
+    // const readingListTest = readingList
+
+    // const { title: myTitle, authors: {'0': {name: authorName} } } = readingListTest
+    // console.log(readingListTest)
+
+
+// this function works but repeat searches just append more books
+    // could I empty the array using .reduce when the user clicks search again?
+    // a clunkier option would be to have another button "start over"
+
+
+//---------------------------------------------//
+// add a function to clear the list and start over
+//---------------------------------------------//
+
+// function newSearch() {
+//     list = []
+//     console.log('new search button clicked')
+// }
+
+// document.getElementById('clearButton').addEventListener('click', newSearch)
+
+// // select loading div
+// let loader = document.querySelector('#loading')
+
+// // select content div
+// let content = document.querySelector('#content')
+
+// // showing loading
+// function displayLoading() {
+//     loader.classList.add('display')
+//     // to stop loading after some time
+//     setTimeout(() => {
+//         loader.classList.remove('display')
+//     }, 5000)
+// }
+
+// // hiding loading
+// function hideloading() {
+//     loader.classList.remove('display')
+// }
