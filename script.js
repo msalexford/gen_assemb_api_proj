@@ -1,3 +1,5 @@
+
+
 //---------------------------------------------//
 // store variables of three items we will need:
 //---------------------------------------------//
@@ -6,6 +8,7 @@
 const button = document.querySelector('button')
 // input field where the user will be typing in their search
 const input = document.querySelector('input')
+
 // div that will hold our result when we get it back
 const placeholderDiv = document.querySelector('div')
 
