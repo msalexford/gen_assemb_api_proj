@@ -1,10 +1,6 @@
 
 li:before {content: '\1F4DA'; margin-left: -20px; margin-right: 10px;}
 
-/* .p {
-    font-family: Arial, Helvetica, sans-serif;
-} */
-
 * {
     font-family: Arial, Geneva, Helvetica, sans-serif;
   }
@@ -26,16 +22,33 @@ button {
     margin: 2px;
 }
 
-#resultsdiv {
-    width: 500px;
-    padding: .5em;
+#apiresults {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+}
+
+ul {
+    list-style-type:none;
+    text-align: left;
 }
 
 ul li {
     margin: 5px;
 }
 
-#loading {
+.footer {  
+position: fixed;  
+left: 10px;  
+bottom: 5px;  
+right: 10px;   
+width: 95%;  
+color: gray;  
+text-align: center;  
+}  
+
+/* #loading {
     width: 2rem;
     height: 2rem;
     border: 5px solid #f3f3f3;
@@ -57,4 +70,4 @@ ul li {
     to {
         transform: rotate(360deg);
     }
-}
+} */

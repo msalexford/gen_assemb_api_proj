@@ -7,7 +7,7 @@ const button = document.querySelector('button')
 
 // create function to change background color of button on mouseover
 function changeBgColor() {
-    button.style.background = '#FFD1BD'
+    button.style.background = '#FFBDBD'
 }
 // create function to return background color to default on mouseover
 function returnBgColor() {
